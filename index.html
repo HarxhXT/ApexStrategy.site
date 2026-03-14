@@ -1,311 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>HarxhXT | Developer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:Segoe UI,sans-serif
-}
-body{
-  background:radial-gradient(circle at top,#0f0f1a,#05050a);
-  color:#fff;
-  overflow-x:hidden
-}
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  background-image:
-    radial-gradient(#00ffe1 1px,transparent 1px),
-    radial-gradient(#a855f7 1px,transparent 1px);
-  background-size:80px 80px;
-  opacity:.15;
-  animation:move 20s linear infinite;
-  z-index:-1
-}
-@keyframes move{
-  from{background-position:0 0,40px 40px}
-  to{background-position:400px 400px,440px 440px}
-}
-header{
-  padding:20px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center
-}
-.logo{
-  font-weight:700;
-  color:#00ffe1;
-  text-shadow:0 0 12px #00ffe1
-}
-.hero{
-  padding:60px 20px;
-  text-align:center
-}
-.status{
-  display:inline-block;
-  padding:6px 14px;
-  border:1px solid #00ffe1;
-  border-radius:20px;
-  color:#00ffe1;
-  margin-bottom:20px
-}
-.hero h1{
-  font-size:32px;
-  margin:20px 0
-}
-.hero h1 span{
-  color:#a855f7;
-  text-shadow:0 0 12px #a855f7
-}
-.hero p{
-  opacity:.8;
-  margin-bottom:30px
-}
-.buttons a{
-  padding:12px 22px;
-  margin:5px;
-  text-decoration:none;
-  border-radius:6px;
-  font-weight:700
-}
-.primary{
-  background:linear-gradient(90deg,#00ffe1,#a855f7);
-  color:#000
-}
-.secondary{
-  border:1px solid #00ffe1;
-  color:#00ffe1
-}
-section{
-  padding:60px 20px
-}
-.section-title{
-  text-align:center;
-  margin-bottom:30px
-}
-.section-title h2 span{
-  color:#00ffe1
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px
-}
-.card{
-  background:rgba(255,255,255,.03);
-  border:1px solid rgba(0,255,225,.2);
-  padding:20px;
-  border-radius:14px;
-  backdrop-filter:blur(10px);
-  box-shadow:0 0 25px rgba(0,255,225,.08)
-}
-.card h3{
-  color:#00ffe1;
-  margin-bottom:10px
-}
-.card p{
-  opacity:.85;
-  line-height:1.6
-}
-
-/* CONTACT */
-.contact-cta{
-  text-align:center;
-  padding:80px 20px
-}
-.contact-text{
-  margin:15px 0 25px;
-  opacity:.8
-}
-.contact-links{
-  display:flex;
-  justify-content:center;
-  gap:15px;
-  flex-wrap:wrap
-}
-.contact-links a{
-  padding:12px 22px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  color:#000;
-  background:linear-gradient(90deg,#00ffe1,#a855f7);
-  box-shadow:0 0 18px rgba(0,255,225,.5);
-  transition:.3s
-}
-.contact-links a:hover{
-  transform:translateY(-4px);
-  box-shadow:0 0 30px rgba(168,85,247,.8)
-}
-
-footer{
-  text-align:center;
-  padding:30px;
-  opacity:.6
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harxhxt F1 Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 </head>
-
 <body>
+  <header>
+    <h1>Harxhxt F1 Aerodynamics Portfolio</h1>
+    <p>Student | Aspiring F1 Engineer</p>
+  </header>
 
-<header>
-  <div class="logo">⚡HarxhXT</div>
-</header>
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I am a student passionate about F1 car design, aerodynamics, and engineering. I am building my skills in CAD, CFD simulation, and sim racing to pursue a career in motorsport engineering.</p>
+  </section>
 
-<section class="hero">
-  <span class="status">SYSTEM STATUS : ONLINE</span>
-  <h1>MINECRAFT • DISCORD •<br><span>WEB DEVELOPER</span></h1>
-  <p>Java • Spigot • Discord Bots • Modern Web Apps</p>
+  <section id="projects">
+    <h2>F1 Projects</h2>
+    <div id="carModel"></div>
+    <p>3D Car model with basic aerodynamic simulation.</p>
+    <img src="images/your-car-render.png" alt="F1 Car Render" style="width:100%; max-width:400px; margin-top:10px;">
+  </section>
 
-  <div class="buttons">
-    <a href="#projects" class="primary">VIEW PROJECTS</a>
-    <a href="contact.html" class="secondary">CONTACT</a>
-  </div>
-</section>
-  
-<!-- EXPERIENCE / CLIENTS / PROJECTS COMPLETED -->
-<section id="stats">
-  <div class="section-title">
-    <h2>MY <span>STATS</span></h2>
-  </div>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yourname@example.com">yourname@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yourprofile" target="_blank">yourprofile</a></p>
+  </section>
 
-  <div class="grid" style="margin-top:40px;">
-    <div class="card">
-      <h3>4+</h3>
-      <p>Years of Experience</p>
-    </div>
+  <footer>
+    <p>© 2026 Harxhxt F1 Portfolio</p>
+  </footer>
 
-    <div class="card">
-      <h3>50+</h3>
-      <p>Clients Satisfied</p>
-    </div>
-
-    <div class="card">
-      <h3>50000+</h3>
-      <p>Code Lines</p>
-    </div>
-
-    <div class="card">
-      <h3>100+</h3>
-      <p>Projects Completed</p>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="section-title">
-    <h2>SKILLS & <span>TECHNOLOGIES</span></h2>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>🛠 Minecraft</h3>
-      <p>Spigot / Paper API<br>BungeeCord<br>Velocity<br>NMS<br>ProtocolLib</p>
-    </div>
-
-    <div class="card">
-      <h3>🤖 Discord</h3>
-      <p>Discord.js<br>JDA<br>Lavalink<br>Slash Commands<br>Buttons</p>
-    </div>
-
-    <div class="card">
-      <h3>🌐 Web Development</h3>
-      <p>HTML • CSS • JavaScript<br>Responsive UI<br>Neon / Cyberpunk<br>Animations</p>
-    </div>
-
-    <div class="card">
-      <h3>🗄 Databases</h3>
-      <p>MySQL<br>MongoDB<br>Redis<br>SQLite<br>PostgreSQL</p>
-    </div>
-  </div>
-</section>
-
-<!-- WHY CHOOSE ME -->
-<section id="why">
-  <div class="section-title">
-    <h2>WHY <span>CHOOSE ME</span></h2>
-  </div>
-
-  <div class="grid" style="margin-top:40px;">
-    <div class="card">
-      <h3>⚡ Expertise</h3>
-      <p>
-        Years of hands-on experience with Minecraft, Discord, and Web projects.  
-        I deliver optimized, stable, and fully functional systems.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>💡 Creativity</h3>
-      <p>
-        I craft unique and interactive designs that stand out,  
-        from neon/cyberpunk UIs to animated web apps.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🛠 Quality</h3>
-      <p>
-        Clean, maintainable code and high-performance systems  
-        ensure your projects run smooth and reliable.
-      </p>
-    </div>
-
-    <div class="card">
-      <h3>🤝 Reliability</h3>
-      <p>
-        Professional communication, timely delivery,  
-        and 100% client satisfaction guaranteed.
-      </p>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <div class="section-title">
-    <h2>MY <span>PROJECTS</span></h2>
-  </div>
-
-  <div class="grid">
-    <div class="card">
-      <h3>Swan MC</h3>
-      <p>Premium Minecraft server with custom systems & optimizations.</p>
-    </div>
-    <div class="card">
-      <h3>Unforce SMP</h3>
-      <p>SMP mechanics, performance tuning & quality-of-life plugins.</p>
-    </div>
-    <div class="card">
-      <h3>Wammu MC</h3>
-      <p>Events, Bedwars setup, PvP systems & unique gameplay mechanics.</p>
-    </div>
-  </div>
-</section>
-
-<section class="contact-cta">
-  <h2>Let’s Work Together</h2>
-  <p class="contact-text">
-    Want to discuss a project or collaboration?<br>
-    Feel free to reach out.
-  </p>
-
-  <div class="contact-links">
-    <a href="mailto:harshbankey09@gmail.com">Email</a>
-    <a href="https://discord.com/users/harxhxt" target="_blank">Discord</a>
-    <a href="https://github.com/harxhxt" target="_blank">GitHub</a>
-  </div>
-</section>
-
-<footer>
-  © 2026 HarxhXT — Developer
-</footer>
-
+  <script src="scripts.js"></script>
 </body>
-  </html>
+</html>
