@@ -1,205 +1,88 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
-}
-
+/* Reset & Body */
 body {
-  background: radial-gradient(circle at top, #0f0f1a, #05050a);
-  color: #fff;
-  overflow-x: hidden;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0d0d0d;
+  color: #ffffff;
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    radial-gradient(#00ffe1 1px, transparent 1px),
-    radial-gradient(#a855f7 1px, transparent 1px);
-  background-size: 80px 80px;
-  opacity: 0.15;
-  animation: move 20s linear infinite;
-  z-index: -1;
-}
-
-@keyframes move {
-  from { background-position: 0 0, 40px 40px; }
-  to { background-position: 400px 400px, 440px 440px; }
-}
-
-/* HEADER */
+/* Header */
 header {
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-weight: 700;
-  color: #00ffe1;
-  text-shadow: 0 0 12px #00ffe1;
-}
-
-/* HERO */
-.hero {
-  padding: 60px 20px;
   text-align: center;
+  padding: 30px 20px;
+  background-color: #1a1a1a;
+  border-bottom: 3px solid #00bfff;
 }
 
-.status {
-  display: inline-block;
-  padding: 6px 14px;
-  border: 1px solid #00ffe1;
-  border-radius: 20px;
-  color: #00ffe1;
-  margin-bottom: 20px;
+header h1 {
+  color: #00bfff;
+  margin: 0;
+  font-size: 2em;
 }
 
-.hero h1 {
-  font-size: 32px;
-  margin: 20px 0;
+header p {
+  color: #ffffff;
+  margin-top: 5px;
+  font-style: italic;
 }
 
-.hero h1 span {
-  color: #a855f7;
-  text-shadow: 0 0 12px #a855f7;
-}
-
-.hero p {
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-.buttons a {
-  padding: 12px 22px;
-  margin: 5px;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 700;
-}
-
-.primary {
-  background: linear-gradient(90deg, #00ffe1, #a855f7);
-  color: #000;
-}
-
-.secondary {
-  border: 1px solid #00ffe1;
-  color: #00ffe1;
-}
-
-/* SECTION TITLES */
+/* Section styling */
 section {
-  padding: 60px 20px;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.section-title h2 span {
-  color: #00ffe1;
-}
-
-/* GRID & CARDS */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(0, 255, 225, 0.2);
   padding: 20px;
-  border-radius: 14px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 0 25px rgba(0, 255, 225, 0.08);
+  margin: 10px auto;
+  max-width: 800px;
 }
 
-.card h3 {
-  color: #00ffe1;
+section h2 {
+  color: #ff4500;
   margin-bottom: 10px;
 }
 
-.card p {
-  opacity: 0.85;
-  line-height: 1.6;
-  text-align: center;
+/* Car Model div */
+#carModel {
+  width: 100%;
+  height: 300px;
+  background-color: #111111;
+  margin-bottom: 10px;
+  border: 2px solid #00bfff;
+  border-radius: 8px;
 }
 
-/* STATS SECTION */
-#stats .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 25px;
-  justify-items: center;
+/* Images */
+img {
+  display: block;
+  margin: 10px auto;
+  border-radius: 5px;
+  border: 2px solid #ff4500;
 }
 
-#stats .card h3 {
-  font-size: 36px;
-  color: #00ffe1;
-}
-
-#stats .card p {
-  margin-top: 10px;
-  color: #9ca3af;
-}
-
-/* CONTACT */
-.contact-cta {
-  text-align: center;
-  padding: 80px 20px;
-}
-
-.contact-text {
-  margin: 15px 0 25px;
-  opacity: 0.8;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-}
-
-.contact-links a {
-  padding: 12px 22px;
-  border-radius: 10px;
+/* Contact Section */
+#contact a {
+  color: #00bfff;
   text-decoration: none;
-  font-weight: 700;
-  color: #000;
-  background: linear-gradient(90deg, #00ffe1, #a855f7);
-  box-shadow: 0 0 18px rgba(0, 255, 225, 0.5);
-  transition: 0.3s;
 }
 
-.contact-links a:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px rgba(168, 85, 247, 0.8);
+#contact a:hover {
+  text-decoration: underline;
 }
 
-/* FOOTER */
+/* Footer */
 footer {
   text-align: center;
-  padding: 30px;
-  opacity: 0.6;
+  padding: 15px;
+  background-color: #111111;
+  border-top: 3px solid #00bfff;
+  font-size: 0.9em;
+  color: #bbbbbb;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 28px;
+/* Responsive */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5em;
   }
-  .buttons {
-    flex-direction: column;
-  }
-  .grid {
-    grid-template-columns: 1fr;
+
+  #carModel {
+    height: 200px;
   }
 }
